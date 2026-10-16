@@ -1,11 +1,16 @@
 #pragma once
+#include <iostream>
+using namespace std;
+
 class Sorting{
-	int n;
-	int* arr = new int[n];
+	unsigned int n;
+	int* arr;
 public:
 	Sorting();
-	Sorting(int _n, int* _arr);
-	void init(int _n, int* _arr);
+	Sorting(unsigned int _n, int* _arr);
+	void init(unsigned int _n, int* _arr);
+	void printArr();
+	void fillArr();
 
 	//SORTING METHODS
 	void stupidSortAsc();
@@ -13,7 +18,7 @@ public:
 
 	//GETTERS
 	int getN();
-	int getArr();
+	int* getArr();
 	//SETTERS
 	void setN(int _n);
 	void setArr(int* _arr);
