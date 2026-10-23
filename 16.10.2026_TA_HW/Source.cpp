@@ -6,14 +6,18 @@ int main()
 {
 
 	// У main тільки тестування чи сорт правильно сортує чи ні
-	Sorting obj(6, new int[6]{2,1,4,5,0,3});
+	Sorting obj(100, new int[100]{0});
+	obj.fillArrRand(-100,100);
 	cout << "INITIAL ARRAY:\n";
 	obj.printArr();
 
-	cout << "\nSTUPID SORT ASCENDING:\n";
+	cout << "\nSTUPID SORT DESCENDING:\n";
+	obj.stupidSortDesc();
+	obj.printArr();
+	cout << "STUPID SORT ASCENDING:\n";
 	obj.stupidSortAsc();
 	obj.printArr();
-	cout << "STUPID SORT DESCENDING:\n";
+	cout << "STUPID SORT DESCENDING (again):\n";
 	obj.stupidSortDesc();
 	obj.printArr();
 

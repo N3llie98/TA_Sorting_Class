@@ -39,6 +39,16 @@ void Sorting::fillArr()
 	cout << endl;
 }
 
+void Sorting::fillArrRand(int min, int max)
+{
+	if (arr == nullptr || n < 1) {
+		return;
+	}
+	for (int i = 0; i < n; i++) {
+		arr[i] = rand() % (max - min) + min;
+	}
+}
+
 void Sorting::stupidSortAsc()
 {
 	if (arr == nullptr || n <= 1) {
@@ -134,7 +144,7 @@ void Sorting::bubbleSortAsc()
 			}
 			count++;
 		}
-		if (isSorted) { return; }
+		if (isSorted) { break; }
 	}
 	cout << "- iteration count: " << count << endl;
 }
@@ -155,7 +165,7 @@ void Sorting::bubbleSortDesc()
 			}
 			count++;
 		}
-		if (isSorted) { return; }
+		if (isSorted) { break; }
 	}
 	cout << "- iteration count: " << count << endl;
 }
