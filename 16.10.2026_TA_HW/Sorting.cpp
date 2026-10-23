@@ -44,12 +44,15 @@ void Sorting::stupidSortAsc()
 	if (arr == nullptr || n <= 1) {
 		return;
 	}
+	int count = 0;
 	for (size_t i = 0;i < n - 1;i++) {
 		if (arr[i] > arr[i + 1]) {
 			swap(arr[i], arr[i + 1]);
 			i = -1; // щоб ми опинились на індексі 0 після i++
 		}
+		count++;
 	}
+	cout << "- iteration count: " << count << endl;
 }
 
 void Sorting::stupidSortDesc()
@@ -57,12 +60,15 @@ void Sorting::stupidSortDesc()
 	if (arr == nullptr || n <= 1) {
 		return;
 	}
+	int count = 0;
 	for (size_t i = 0;i < n - 1;i++) {
 		if (arr[i] < arr[i + 1]) {
 			swap(arr[i], arr[i + 1]);
 			i = -1; // щоб ми опинились на індексі 0 після i++
 		}
+		count++;
 	}
+	cout << "- iteration count: " << count << endl;
 }
 
 void Sorting::gnomeSortAsc()
@@ -70,6 +76,7 @@ void Sorting::gnomeSortAsc()
 	if (arr == nullptr || n <= 1) {
 		return;
 	}
+	int count = 0;
 	size_t i = 0;
 	while (i < n - 1) {
 		if (arr[i] > arr[i + 1]) {
@@ -84,7 +91,9 @@ void Sorting::gnomeSortAsc()
 		else {
 			++i;
 		}
+		count++;
 	}
+	cout << "- iteration count: " << count << endl;
 }
 
 void Sorting::gnomeSortDesc()
@@ -92,6 +101,7 @@ void Sorting::gnomeSortDesc()
 	if (arr == nullptr || n <= 1) {
 		return;
 	}
+	int count = 0;
 	size_t i = 0;
 	while (i < n - 1) {
 		if (arr[i] < arr[i + 1]) {
@@ -103,7 +113,9 @@ void Sorting::gnomeSortDesc()
 		else {
 			++i;
 		}
+		count++;
 	}
+	cout << "- iteration count: " << count << endl;
 }
 
 void Sorting::bubbleSortAsc()
@@ -111,6 +123,7 @@ void Sorting::bubbleSortAsc()
 	if (arr == nullptr || n <= 1) {
 		return;
 	}
+	int count = 0;
 	bool isSorted = true;
 	for (size_t i = 0;i < n - 1;i++) {
 		isSorted = true;
@@ -119,9 +132,11 @@ void Sorting::bubbleSortAsc()
 				swap(arr[j], arr[j + 1]);
 				isSorted = false;
 			}
+			count++;
 		}
 		if (isSorted) { return; }
 	}
+	cout << "- iteration count: " << count << endl;
 }
 
 void Sorting::bubbleSortDesc()
@@ -129,6 +144,7 @@ void Sorting::bubbleSortDesc()
 	if (arr == nullptr || n <= 1) {
 		return;
 	}
+	int count = 0;
 	bool isSorted = true;
 	for (size_t i = 0;i < n - 1;i++) {
 		isSorted = true;
@@ -137,9 +153,11 @@ void Sorting::bubbleSortDesc()
 				swap(arr[j], arr[j + 1]);
 				isSorted = false;
 			}
+			count++;
 		}
 		if (isSorted) { return; }
 	}
+	cout << "- iteration count: " << count << endl;
 }
 
 int Sorting::getN()

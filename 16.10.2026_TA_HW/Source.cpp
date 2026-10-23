@@ -28,7 +28,7 @@ int main()
 	obj.bubbleSortAsc();
 	obj.printArr();
 	cout << "BUBBLE SORT DESCENDING:\n";
-	obj.stupidSortDesc();
+	obj.bubbleSortDesc();
 	obj.printArr();
 	return 0;
 }
