@@ -3,12 +3,12 @@
 using namespace std;
 
 class Sorting{
-	unsigned int n;
+	size_t n;
 	int* arr;
 public:
 	Sorting();
-	Sorting(unsigned int _n, int* _arr);
-	void init(unsigned int _n, int* _arr);
+	Sorting(size_t _n, int* _arr);
+	void init(size_t _n, int* _arr);
 	void printArr();
 	void fillArr();
 
@@ -16,11 +16,19 @@ public:
 	void stupidSortAsc();
 	void stupidSortDesc();
 
+	void gnomeSortAsc();
+	void gnomeSortDesc();
+
+	void bubbleSortAsc();
+	void bubbleSortDesc();
+
 	//GETTERS
 	int getN();
 	int* getArr();
 	//SETTERS
-	void setN(int _n);
+	void setN(size_t _n);
 	void setArr(int* _arr);
+
+	~Sorting(); // destructor
 };
 
