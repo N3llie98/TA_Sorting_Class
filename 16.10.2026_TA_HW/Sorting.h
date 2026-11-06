@@ -24,7 +24,9 @@ public:
 	void bubbleSortDesc();
 
 	void selectionSortAsc();
+	//void selectionSortAscReversed();
 	void selectionSortDesc();
+	//void selectionSortDescReversed();
 
 	//GETTERS
 	int getN();

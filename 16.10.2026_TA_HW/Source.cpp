@@ -6,8 +6,9 @@ int main()
 {
 
 	// У main тільки тестування чи сорт правильно сортує чи ні
-	Sorting obj(100, new int[100]{0});
-	obj.fillArrRand(-100,100);
+	Sorting obj(10, new int[10]{0});
+	obj.fillArrRand(-10,10);
+	//obj.fillArr();
 	cout << "INITIAL ARRAY:\n";
 	obj.printArr();
 
@@ -41,5 +42,11 @@ int main()
 	cout << "\nSELECTION SORT DESCENDING:\n";
 	obj.selectionSortDesc();
 	obj.printArr();
+	/*cout << "\nSELECTION SORT ASCENDING REVERSED ALGORITHM:\n";
+	obj.selectionSortAscReversed();
+	obj.printArr();*/
+	/*cout << "\nSELECTION SORT DESCENDING REVERSED ALGORITHM:\n";
+	obj.selectionSortDescReversed();
+	obj.printArr();*/
 	return 0;
 }
