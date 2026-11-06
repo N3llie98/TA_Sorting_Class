@@ -34,5 +34,12 @@ int main()
 	cout << "BUBBLE SORT DESCENDING:\n";
 	obj.bubbleSortDesc();
 	obj.printArr();
+
+	cout << "\nSELECTION SORT ASCENDING:\n";
+	obj.selectionSortAsc();
+	obj.printArr();
+	cout << "\nSELECTION SORT DESCENDING:\n";
+	obj.selectionSortDesc();
+	obj.printArr();
 	return 0;
 }

@@ -23,6 +23,9 @@ public:
 	void bubbleSortAsc();
 	void bubbleSortDesc();
 
+	void selectionSortAsc();
+	void selectionSortDesc();
+
 	//GETTERS
 	int getN();
 	int* getArr();

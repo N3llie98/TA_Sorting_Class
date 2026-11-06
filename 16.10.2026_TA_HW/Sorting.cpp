@@ -170,6 +170,44 @@ void Sorting::bubbleSortDesc()
 	cout << "- iteration count: " << count << endl;
 }
 
+void Sorting::selectionSortAsc()
+{
+	if (arr == nullptr || n <= 1) {
+		return;
+	}
+	int count = 0;
+	for (size_t i = 0;i < n - 1;i++) {
+		int minId = i;
+		for (size_t j = i + 1;j < n;j++) {
+			if (arr[j] < arr[minId]) {
+				minId = j;
+			}
+			count++;
+		}
+		swap(arr[i], arr[minId]);
+	}
+	cout << "- iteration count: " << count << endl;
+}
+
+void Sorting::selectionSortDesc()
+{
+	if (arr == nullptr || n <= 1) {
+		return;
+	}
+	int count = 0;
+	for (size_t i = 0;i < n - 1;i++) {
+		int maxId = i;
+		for (size_t j = i + 1;j < n;j++) {
+			if (arr[j] > arr[maxId]) {
+				maxId = j;
+			}
+			count++;
+		}
+		swap(arr[i], arr[maxId]);
+	}
+	cout << "- iteration count: " << count << endl;
+}
+
 int Sorting::getN()
 {
 	return n;
