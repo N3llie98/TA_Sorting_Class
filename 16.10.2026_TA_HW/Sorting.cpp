@@ -176,14 +176,18 @@ void Sorting::selectionSortAsc()
 		return;
 	}
 	int count = 0;
+	bool isSorted = true;
 	for (size_t i = 0;i < n - 1;i++) {
 		int minId = i;
+		isSorted = true;
 		for (size_t j = i + 1;j < n;j++) {
 			if (arr[j] < arr[minId]) {
 				minId = j;
+				isSorted = false;
 			}
 			count++;
 		}
+		if (isSorted) { break; }
 		swap(arr[i], arr[minId]);
 	}
 	cout << "- iteration count: " << count << endl;
@@ -195,14 +199,18 @@ void Sorting::selectionSortDesc()
 		return;
 	}
 	int count = 0;
+	bool isSorted = true;
 	for (size_t i = 0;i < n - 1;i++) {
 		int maxId = i;
+		isSorted = true;
 		for (size_t j = i + 1;j < n;j++) {
 			if (arr[j] > arr[maxId]) {
 				maxId = j;
+				isSorted = false;
 			}
 			count++;
 		}
+		if (isSorted) { break; }
 		swap(arr[i], arr[maxId]);
 	}
 	cout << "- iteration count: " << count << endl;
