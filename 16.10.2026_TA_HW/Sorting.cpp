@@ -170,6 +170,33 @@ void Sorting::bubbleSortDesc()
 	cout << "- iteration count: " << count << endl;
 }
 
+void Sorting::insertionSortAsc()
+{
+	if (arr == nullptr || n <= 1) {
+		return;
+	}
+	int count = 0;
+	int id;
+	for (size_t i = 1;i < n;++i) {
+		int el = arr[i];
+		int j = i - 1;
+		while (j >= 0 && arr[j] > el) {
+			arr[j + 1] = arr[j];
+			j--;
+		}
+		arr[j + 1] = el;
+	}
+}
+
+void Sorting::insertionSortDesc()
+{
+	if (arr == nullptr || n <= 1) {
+		return;
+	}
+	int count = 0;
+	
+}
+
 void Sorting::selectionSortAsc()
 {
 	if (arr == nullptr || n <= 1) {

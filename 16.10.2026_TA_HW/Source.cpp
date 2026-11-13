@@ -6,13 +6,13 @@ int main()
 {
 
 	// У main тільки тестування чи сорт правильно сортує чи ні
-	Sorting obj(10, new int[10]{0});
-	obj.fillArrRand(-10,10);
-	//obj.fillArr();
+	Sorting obj(3, new int[3]{0});
+	//obj.fillArrRand(0,5);
+	obj.fillArr();
 	cout << "INITIAL ARRAY:\n";
 	obj.printArr();
 
-	cout << "\nSTUPID SORT DESCENDING:\n";
+	/*cout << "\nSTUPID SORT DESCENDING:\n";
 	obj.stupidSortDesc();
 	obj.printArr();
 	cout << "STUPID SORT ASCENDING:\n";
@@ -41,12 +41,15 @@ int main()
 	obj.printArr();
 	cout << "\nSELECTION SORT DESCENDING:\n";
 	obj.selectionSortDesc();
-	obj.printArr();
+	obj.printArr();*/
 	/*cout << "\nSELECTION SORT ASCENDING REVERSED ALGORITHM:\n";
 	obj.selectionSortAscReversed();
 	obj.printArr();*/
 	/*cout << "\nSELECTION SORT DESCENDING REVERSED ALGORITHM:\n";
 	obj.selectionSortDescReversed();
 	obj.printArr();*/
+
+	obj.insertionSortAsc();
+	obj.printArr();
 	return 0;
 }

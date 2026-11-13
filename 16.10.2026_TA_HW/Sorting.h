@@ -23,6 +23,9 @@ public:
 	void bubbleSortAsc();
 	void bubbleSortDesc();
 
+	void insertionSortAsc();
+	void insertionSortDesc();
+
 	void selectionSortAsc();
 	//void selectionSortAscReversed();
 	void selectionSortDesc();
