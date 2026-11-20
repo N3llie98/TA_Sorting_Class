@@ -55,5 +55,17 @@ int main()
 	cout << "INSERTION SORT DESCENDING:\n";
 	obj.insertionSortDesc();
 	obj.printArr();
+
+	int searchedNum = 5;
+	cout << "\nBINARY SEARCH ASC:\n-Initial array:\n";
+	obj.insertionSortAsc();
+	obj.printArr();
+	cout << "Searched element: " << searchedNum << endl;
+	obj.binarySearchAsc(searchedNum);
+	cout << "\nBINARY SEARCH DESC:\n-Initial array:\n";
+	obj.insertionSortDesc();
+	obj.printArr();
+	cout << "Searched element: " << searchedNum << endl;
+	obj.binarySearchDesc(searchedNum);
 	return 0;
 }

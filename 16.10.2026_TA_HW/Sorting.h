@@ -13,6 +13,7 @@ public:
 	void fillArr();
 	void fillArrRand(int min = -10, int max = 10);
 
+
 	//SORTING METHODS
 	void stupidSortAsc();
 	void stupidSortDesc();
@@ -30,6 +31,12 @@ public:
 	//void selectionSortAscReversed();
 	void selectionSortDesc();
 	//void selectionSortDescReversed();
+
+
+	//SEARCHING METHODS
+	void binarySearchAsc(int searchedNum);
+	void binarySearchDesc(int searchedNum);
+
 
 	//GETTERS
 	int getN();

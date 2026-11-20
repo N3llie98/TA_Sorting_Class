@@ -286,6 +286,72 @@ void Sorting::selectionSortDesc()
 	cout << "- iteration count: " << count << endl;
 }
 
+void Sorting::binarySearchAsc(int searchedNum)
+{
+	if (arr == nullptr || n <= 1) {
+		return;
+	}
+	if (searchedNum < arr[0] || searchedNum > arr[n-1]) {
+		cout << "Element not found\n";
+		return;
+	}
+	int left = 0;
+	int right = n - 1;
+	int midId;
+	int id = -1;
+	int count = 0;
+	while (left <= right)
+	{
+		midId = (left + right) / 2;
+		if (arr[midId] == searchedNum) {
+			id = midId;
+			break;
+		}
+		else if (arr[midId] > searchedNum) {
+			right = midId - 1;
+		}
+		else {
+			left = midId + 1;
+		}
+		count++;
+	}
+	cout << "- iteration count: " << count << endl;
+	cout << "Element found at index: " << id << endl;
+}
+
+void Sorting::binarySearchDesc(int searchedNum)
+{
+	if (arr == nullptr || n <= 1) {
+		return;
+	}
+	if (searchedNum > arr[0] || searchedNum < arr[n - 1]) {
+		cout << "Element not found\n";
+		return;
+	}
+	int left = 0;
+	int right = n - 1;
+	int midId;
+	int id = -1;
+	int count = 0;
+	while (left <= right)
+	{
+		midId = (left + right) / 2;
+		if (arr[midId] == searchedNum) {
+			id = midId;
+			break;
+		}
+		else if (arr[midId] < searchedNum) {
+			right = midId - 1;
+		}
+		else {
+			left = midId + 1;
+		}
+		count++;
+	}
+	cout << "- iteration count: " << count << endl;
+	cout << "Element found at index: " << id << endl;
+}
+
 //void Sorting::selectionSortDescReversed()
 //{
 //}
